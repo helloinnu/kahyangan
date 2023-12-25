@@ -2,20 +2,19 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <div class="row vh-100 justify-content-center">
+        <div class="col-4 align-self-center">
+            <div class="p-4">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                <div class="">
+                    <h2 class="mb-4 fw-semibold">Selamat Datang</h2>
+                    <p class="fs-5 text-secondary">Sistem Manajemen Aset Perumda Perkebunan Kahyangan <br> JEMBER</p>
+                    <form class="mt-4" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <div class="">
+                                <input id="name" type="name" class="form-control form-control-lg @error('name') is-invalid @enderror" name="name" required autocomplete="name" autofocus placeholder="Username">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -26,10 +25,8 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div class="">
+                                <input id="password" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -39,7 +36,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -49,24 +46,28 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                        <div class="mt-5">
+                            <div class="">
+                                <button type="submit" class="btn btn-lg btn-success w-100">
+                                    {{ __('Sign in') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                {{-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif --}}
                             </div>
                         </div>
                     </form>
+                    <p class="fs-5 text-secondary text-center mt-4">Belum memiliki akun? <span class="fw-semibold text-success">Silakan menghubungi admin Anda</span></p>
                 </div>
             </div>
+        </div>
+        <div class="col-8 align-self-center d-flex justify-content-center">
+            <img src="{{ asset('img/login-bg.png') }}" alt="">
         </div>
     </div>
 </div>
