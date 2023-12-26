@@ -8,7 +8,7 @@
 
                 <div class="">
                     <h2 class="mb-4 fw-semibold">Selamat Datang</h2>
-                    <p class="fs-5 text-secondary">Sistem Manajemen Aset Perumda Perkebunan Kahyangan <br> JEMBER</p>
+                    <p class="fs-5 text-secondary">Sistem Manajemen Aset <br> Perumda Perkebunan Kahyangan <br> JEMBER</p>
                     <form class="mt-4" method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                     </form>
-                    <p class="fs-5 text-secondary text-center mt-4">Belum memiliki akun? <span class="fw-semibold text-success">Silakan menghubungi admin Anda</span></p>
+                    <p class="text-secondary text-center mt-4">Belum memiliki akun? <span class="fw-semibold text-success">Silakan menghubungi admin Anda</span></p>
                 </div>
             </div>
         </div>
