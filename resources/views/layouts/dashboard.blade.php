@@ -8,6 +8,7 @@
         background-repeat: no-repeat;      
         background-size: 100% auto;  
         background-attachment: fixed;
+        min-height: 100vh;
         "    >
     <div class="row px-3 h-100">
         <aside class="rounded-4 bg-white col-2 p-2 h-100" >
